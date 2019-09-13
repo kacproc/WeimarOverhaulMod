@@ -1,0 +1,62 @@
+ideas = {
+    country = {
+        trade_unionism = {
+            allowed = {
+                always = no
+            }
+
+            removal_cost = -1
+            picture = generic_pp_unity_bonus
+
+            modifier = {
+                political_power_cost = 2
+                conscription_factor = -1
+
+                research_speed_factor = -100
+                enemy_justify_war_goal_time = 500
+
+                join_faction_tension = 2
+                lend_lease_tension = 2
+
+                send_volunteers_tension = 2
+                guarantee_tension = 2
+            	ai_badass_factor = 0
+                ai_get_ally_desire_factor = -500
+				training_time_factor = 1000
+            }
+        }
+		idea_EFR_neutrality = {
+			picture = neutrality_idea
+
+			allowed = {
+				original_tag = EFR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				join_faction_tension = 2.00
+				lend_lease_tension = 2
+				send_volunteers_tension = 0.20
+				guarantee_tension = 2.0
+				ai_get_ally_desire_factor = -500
+			}
+		}
+		no_training = {
+            allowed = {
+                always = no
+            }
+
+            removal_cost = -1
+            picture = neutrality_idea
+
+            modifier = {
+				training_time_factor = 1000
+            }
+        }		
+    }
+}

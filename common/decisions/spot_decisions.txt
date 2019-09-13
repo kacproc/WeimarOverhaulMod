@@ -1,0 +1,189 @@
+USA_island_hopping = {
+		USA_operation_detachment = {
+			icon = generic_army_support
+			allowed = {
+				original_tag = USA
+			}
+			visible = {
+				has_war = yes
+			}
+			available = {
+				USA = {controls_state = 638}
+				USA = {controls_state = 648}
+				NOT = {has_idea = USA_operation_idea}
+			}
+			cost = 25
+			fire_only_once = yes
+			complete_effect = {
+				add_timed_idea = {
+					idea = USA_operation_idea
+					days = 30
+				}
+			} 
+		}
+		
+		USA_operation_iceberg = {
+			icon = generic_army_support
+			allowed = {
+				original_tag = USA
+			}
+			visible = {
+				has_war = yes
+			}
+			available = {
+				USA = {controls_state = 638}
+				USA = {controls_state = 645}
+				NOT = {has_idea = USA_operation_idea}
+			}
+			cost = 25
+			fire_only_once = yes
+			complete_effect = {
+				add_timed_idea = {
+					idea = USA_operation_idea
+					days = 30
+				}
+			} 
+		}
+		
+		USA_operation_sandcrab = {
+			icon = generic_army_support
+			allowed = {
+				original_tag = USA
+			}
+			visible = {
+				has_war = yes
+			}
+			available = {
+				NOT = {USA = {controls_state = 650}} 
+				NOT = {has_idea = USA_operation_idea}
+				
+			}
+			cost = 25
+			fire_only_once = yes
+			complete_effect = {
+				add_timed_idea = {
+					idea = USA_operation_idea
+					days = 30
+				}
+			} 
+		}
+		
+		USA_operation_downfall = {
+			icon = generic_army_support
+			allowed = {
+				original_tag = USA
+			}
+			visible = {
+				has_war = yes
+			}
+			available = {
+				USA = {controls_state = 526}
+				USA = {controls_state = 645}
+				NOT = {has_idea = USA_operation_idea}
+				
+			}
+			cost = 25
+			fire_only_once = yes
+			complete_effect = {
+				add_timed_idea = {
+					idea = USA_operation_idea
+					days = 30
+				}
+			} 
+		}
+	}
+operations = {
+	USA_torch_decision = { 
+		icon = generic_operation
+		
+		available = { 
+			EFR = { exists = yes } 
+			has_completed_focus = USA_war_plan_gray 
+			has_war = yes
+		} 
+		
+		cost = 25 
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 0
+			
+		}
+		
+		visible = { 
+			tag = USA  
+			#EFR = { exists = yes } 
+		}
+		
+		complete_effect = {
+			EFR = { remove_ideas = idea_EFR_neutrality }
+			GER = { puppet = EFR }
+			remove_ideas = inexperienced_army
+			declare_war_on = {
+				target = EFR
+				type = annex_everything
+			}
+			USA = {
+				transfer_state = 461
+				transfer_state = 462					
+			}	
+
+			461 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}			
+			}
+			462 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}			
+			}
+			every_country = { 
+				limit = { 
+					NOT = { tag = USA } 
+					is_in_faction_with = USA 
+				}
+				country_event = { id = spot.11 } 
+			}					
+		}
+	}
+	
+	USA_husky_decision = {
+		icon = generic_operation
+		
+		available = {
+			OR = {
+				USA = { controls_state = 458 }
+				any_other_country = {
+					is_in_faction_with = USA
+					controls_state = 458
+				}
+			}
+			has_completed_focus = USA_operation_husky
+		}
+		
+		cost = 25
+		
+		fire_only_once = yes
+		
+		
+		visible = {
+			tag = USA
+		}
+		
+		complete_effect = {
+			AST = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 90 } }
+			RAJ = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 90 } }
+			NZL = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 90 } }
+			CAN = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 90 } }
+			SAF = { add_timed_idea = { idea = COM_OPERATION_HUSKY days = 90 } }
+			ENG = { add_timed_idea = { idea = ENG_OPERATION_HUSKY days = 90 } }
+			USA = { add_timed_idea = { idea = USA_OPERATION_HUSKY days = 90 } }
+		}
+	}
+}

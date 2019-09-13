@@ -1,0 +1,58 @@
+spriteTypes = {	
+
+### National France Icons ###
+
+	SpriteType = { # French Africa
+		name = "GFX_NATFRA_africa"
+		texturefile = "gfx/interface/goals/NATFRA_africa.dds"
+	}
+	SpriteType = { # Attack the Germans
+		name = "GFX_NATFRA_attackgermany"
+		texturefile = "gfx/interface/goals/NATFRA_attackgermany.dds"
+	}
+	SpriteType = { # Conscription with French flags
+		name = "GFX_NATFRA_conscription"
+		texturefile = "gfx/interface/goals/NATFRA_conscription.dds"
+	}
+	SpriteType = { # Deal with the devil
+		name = "GFX_NATFRA_dealwiththedevil"
+		texturefile = "gfx/interface/goals/NATFRA_dealwiththedevil.dds"
+	}
+	SpriteType = { # Fire with French flags
+		name = "GFX_NATFRA_fire"
+		texturefile = "gfx/interface/goals/NATFRA_fire.dds"
+	}
+	SpriteType = { # A French Flag alone
+		name = "GFX_NATFRA_flagalone"
+		texturefile = "gfx/interface/goals/NATFRA_flagalone.dds"
+	}
+	SpriteType = { # French flags 1
+		name = "GFX_NATFRA_flags1"
+		texturefile = "gfx/interface/goals/NATFRA_flags1.dds"
+	}
+	SpriteType = { # French flags 2
+		name = "GFX_NATFRA_flags2"
+		texturefile = "gfx/interface/goals/NATFRA_flags2.dds"
+	}
+	SpriteType = { # French flags 3
+		name = "GFX_NATFRA_flags3"
+		texturefile = "gfx/interface/goals/NATFRA_flags3.dds"
+	}
+	SpriteType = { # France First
+		name = "GFX_NATFRA_francefirst"
+		texturefile = "gfx/interface/goals/NATFRA_francefirst.dds"
+	}
+	SpriteType = { # Friend with Poland
+		name = "GFX_NATFRA_friendwithpoland"
+		texturefile = "gfx/interface/goals/NATFRA_friendwithpoland.dds"
+	}
+	SpriteType = { # Natural Borders at the Rhine
+		name = "GFX_NATFRA_naturalborders"
+		texturefile = "gfx/interface/goals/NATFRA_naturalborders.dds"
+	}
+	SpriteType = { # Rightfull French borders
+		name = "GFX_NATFRA_rightfullborders"
+		texturefile = "gfx/interface/goals/NATFRA_rightfullborders.dds"
+	}
+
+}

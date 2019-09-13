@@ -1,0 +1,31 @@
+empire_actions = {
+	
+	take_nzl = {
+		
+		icon = generic_operation
+		
+		allowed = {
+			tag = AST
+		}
+					
+		visible = {
+			tag = AST
+			NZL = { is_ai = yes }
+		}
+		
+		fire_only_once = yes
+		
+		cost = 0
+		
+		available = {
+			NZL = { is_ai = yes }
+		}
+		
+		complete_effect = {
+			annex_country = {
+				target = NZL
+				transfer_troops = no
+			}
+		}
+	}
+}
